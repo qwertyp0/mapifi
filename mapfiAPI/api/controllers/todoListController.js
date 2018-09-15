@@ -8,18 +8,13 @@ exports.list_all_tasks = function(req, res) {
     if (err)
       res.send(err);
     res.json(task);
-    res.sendStatus(200);
   });
 };
 
 exports.create_a_task = function(req, res) {
-  console.log("ASDF");
   var new_task = new Task(req.body);
   new_task.save(function(err, task) {
-    if (err)
-      res.send(err);
-    res.json(task);
-    res.sendStatus(200);
+    res.send(req.body);
   });
 };
 
@@ -28,7 +23,6 @@ exports.read_a_task = function(req, res) {
     if (err)
       res.send(err);
     res.json(task);
-    res.sendStatus(200);
   });
 };
 
@@ -38,7 +32,6 @@ exports.update_a_task = function(req, res) {
     if (err)
       res.send(err);
     res.json(task);
-    res.sendStatus(200);
   });
 };
 
