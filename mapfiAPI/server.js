@@ -6,11 +6,12 @@ var express = require('express'),
   Task = require('./api/models/todoListModel'), //created model loading here
   bodyParser = require('body-parser');
 
-mongoose.connect("mongodb+srv://user-steve:j4L90YA5FnMAzI9u@cluster0-tf9jc.gcp.mongodb.net/mapfi?retryWrites=true", { useNewUrlParser: true });
+//mongoose.connect("mongodb+srv://user-steve:j4L90YA5FnMAzI9u@cluster0-tf9jc.gcp.mongodb.net/mapfi?retryWrites=true", { useNewUrlParser: true });
 
 
 mongoose.Promise = global.Promise;
 
+app.use(express.static('public'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
