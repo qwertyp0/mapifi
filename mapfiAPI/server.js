@@ -1,3 +1,4 @@
+
 var express = require('express'),
   app = express(),
   port = process.env.PORT || 3000,
@@ -7,7 +8,7 @@ var express = require('express'),
 
 mongoose.connect("mongodb+srv://user-steve:j4L90YA5FnMAzI9u@cluster0-tf9jc.gcp.mongodb.net/mapfi?retryWrites=true", { useNewUrlParser: true });
 
-// mongoose instance connection url connection
+
 mongoose.Promise = global.Promise;
 
 

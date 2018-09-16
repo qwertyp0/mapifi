@@ -3,9 +3,13 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var TaskSchema = new Schema({
-  _sig: { type: Number},
-  _latitude: { type: Number},
-  _longitude: { type: Number},
+  sig: Number,
+  latitude: Number,
+  longitude: Number,
+  Created_date: {
+    type: Date,
+    default: Date.now
+  },
 });
 
 module.exports = mongoose.model('mapData', TaskSchema);
